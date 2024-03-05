@@ -1,0 +1,23 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+
+POST        /recetas                                    controllers.RecetaController.crearReceta(request : Request)
+GET         /recetas                                    controllers.RecetaController.getRecetas(req: Request )
+GET         /recetas/:idReceta                          controllers.RecetaController.obtenerRecetaPorId( idReceta : Long,req: Request )
+GET         /recetas/nombre/:nombre                     controllers.RecetaController.obtenerRecetaPorNombre(nombre : String,req: Request )
+GET         /recetas/descripcion/:tipoComida            controllers.RecetaController.buscarTipoComida( tipoComida: String, req: Request)
+GET         /recetas/ingrediente/:nombreIngrediente     controllers.RecetaController.buscarPorIngrediente( nombreIngrediente: String, req: Request)
+PUT         /recetas/moficar/:idReceta                  controllers.RecetaController.modificarReceta(idReceta: Long, request: Request)
+PUT         /ingredientes/:idIngrediente                controllers.RecetaController.modificarIngrediente(idIngrediente: Long, request: Request)
+#DELETE      /recetas/eliminar/:idReceta                 controllers.RecetaController.eliminarReceta( idReceta: Long)
+
+
+
+
+

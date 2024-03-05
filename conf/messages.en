@@ -1,0 +1,5 @@
+error.required.name=Name is required
+error.required.type=Type of food is required
+error.required.ingredient.name=Ingredient name is required
+error.required.description=Description is required
+error.required.cook=Cook is required

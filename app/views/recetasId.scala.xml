@@ -1,0 +1,22 @@
+@(receta: models.Receta)
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<receta>
+    <id>@receta.getId()</id>
+    <nombre>@receta.getNombre()</nombre>
+    <tipoComida>@receta.getTipoComida()</tipoComida>
+    <imagen>@receta.getImagen()</imagen>
+    <ingredientes>
+        @for(ingrediente <- receta.getIngredientes()) {
+        <ingrediente>
+            <id>@ingrediente.getId()</id>
+            <nombre>@ingrediente.getNombreIg()</nombre>
+            <descripcion>@ingrediente.getDescripcion()</descripcion>
+            <cocinero>@ingrediente.getCocinero()</cocinero>
+        </ingrediente>
+        }
+    </ingredientes>
+</receta>
+
+
